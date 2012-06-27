@@ -6,13 +6,13 @@ using Web;
 
 namespace Specs.Support
 {
-    public class AtmAutomator
+    public class AtmAutomatorNancy
     {
         private readonly ICashDispenser _cashDispenser;
         private IAccountRepository _accountRepository;
         private Account _account;
 
-        public AtmAutomator(ICashDispenser cashDispenser)
+        public AtmAutomatorNancy(ICashDispenser cashDispenser)
         {
             _cashDispenser = cashDispenser;
         }

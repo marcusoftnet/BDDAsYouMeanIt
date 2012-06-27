@@ -1,12 +1,15 @@
 ﻿using Should.Fluent;
-using Specs.Support;
 using TechTalk.SpecFlow;
+using DSL = Specs.Support.DSL_Domain;
+//using DSL = Specs.Support.DSL_Nancy;
 
 namespace Specs.Steps
 {
     [Binding]
     public class Steps
     {
+        
+
         [Given(@"my account has a balance of \$(\d+)")]
         public void GivenInBalance(int balance)
         {
@@ -16,7 +19,7 @@ namespace Specs.Steps
         [When(@"I withdraw \$(\d+)")]
         public void WithDrawAmount(int amountToWithdraw)
         {
-            DSL.Whitdraw(DSL.MyAccount, amountToWithdraw);
+            DSL.Whitdraw(amountToWithdraw);
         }   
 
         [Then(@"\$(\d+) should be dispensed")]
